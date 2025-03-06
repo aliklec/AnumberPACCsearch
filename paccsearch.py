@@ -45,7 +45,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Streamlit UI elements
-st.title("Search PACC Animals")
+st.title("Search PACC Animals by A Number")
 
 # Display the input label separately in larger text
 st.markdown("<h3>Enter A Number Below</h3>", unsafe_allow_html=True)
@@ -58,6 +58,9 @@ with st.form(key='search_form'):
 # Process form submission (triggered by either Enter key or Search button)
 if submit_button:
     if search_id:
+        
+        formatted_id = search_id.capitalize()
+        
         # Construct the URL using the entered ID
         url = f"https://24petconnect.com/PimaAdoptablePets/Details/PIMA/{search_id}"
         
