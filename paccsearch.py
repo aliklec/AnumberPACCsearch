@@ -62,7 +62,7 @@ if submit_button:
         formatted_id = search_id.capitalize()
         
         # Construct the URL using the entered ID
-        url = f"https://24petconnect.com/PimaAdoptablePets/Details/PIMA/{search_id}"
+        url = f"https://24petconnect.com/PimaAdoptablePets/Details/PIMA/{formatted_id}"
         
         # Display the centered link with custom font size
         st.markdown(f'<div class="centered-link"><a href="{url}" target="_blank" style="font-size: 24px; font-weight: bold;">Click here to view animal details</a></div>', unsafe_allow_html=True)
